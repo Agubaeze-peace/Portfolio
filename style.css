@@ -17,15 +17,54 @@ div{background:#fff;
 
 @keyframes dropHeader{0%{transform:translateY(-100%)}100%{transform:translateY(0)}
 }
+#mobile-menu-open{
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    color: red;
+    font-size: 1.5em;
+    z-index: 20;
+    padding: 7px;
+    border-radius: 4px;
+    background: green;
+}
 header{
+    display: none;
     position:absolute;
     top:0;left:0;right:0;
     text-align:center;
-    z-index:10;animation-name:dropHeader;
-    animation-iteration-count:1;animation-timing-function:ease;animation-duration:0.75s
+    z-index:10;
+    animation-name:dropHeader;
+    animation-iteration-count:1;
+    animation-timing-function:ease;
+    animation-duration:0.75s;
+}
+menu.active{
+    display: block;
+}
+#mobile-menu-close{
+display:inline-block;
+text-align: right;
+width: 100%;
+background: yellow;
+font-size: 1.5em;
+padding-right: 15px;
+padding-top:  10px;
+cursor: pointer;
+color: aqua;
+}
+#mobile-menu-close span{
+    font-size: 0.5em;
+    text-transform: uppercase;
+}
+#mobile-menu-close i{
+    vertical-align: middle;
 }
 header ul{
-    display:inline-block;background:#fff;
+    display:inline-block;
+    background:#fff;
         text-align:center;
         padding:10px;
         margin:0;
@@ -301,11 +340,4 @@ border-radius: 20px;
 .date{
     background-color:rgb(131, 73, 131) ;
 }
-@media screen and (max-width: 600px) {
-    #mobile-menu-close {
-      float: none;
-      width: 100%;
-      overflow: hidden;
-    }
-}
-        
+
